@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable max-len */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
@@ -8,8 +9,7 @@ import List from './List';
 import './test.css';
 
 const Test = () => {
-  const test = JSON.parse(localStorage.notes)
-  const [notes, setNotes] = useState(test);
+  const [notes, setNotes] = useState([]);
   const [activeClass, setActiveClass] = useState(false);
   const [text, setText] = useState('');
   const [title, setTitle] = useState('');
@@ -17,6 +17,14 @@ const Test = () => {
   useEffect(() => {
     localStorage.setItem('notes', JSON.stringify(notes));
   }, [notes]);
+
+  const getItems = JSON.parse(localStorage.getItem('notes'))
+
+  useEffect(() => {
+    setNotes(getItems)
+  }, [])
+  
+  console.log(notes)
   const onHandleClick = () => {
     const newNotes = {
       id: uuidv4(),
@@ -39,7 +47,6 @@ const Test = () => {
 
   return (
     <div className="test">
-    
     <Inpuut
         text={text}
         title={title}
