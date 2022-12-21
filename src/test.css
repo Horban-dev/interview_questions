@@ -1,0 +1,95 @@
+body {
+    background-color: rgb(231, 230, 229);
+}
+
+.input {
+    min-width: 200px;
+    border: 2px solid rgb(54, 22, 22);
+    outline: none;
+    display: block;
+    margin: 10px auto;
+}
+
+.inpuut {
+    text-align: center;
+}
+
+.addButton {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(231, 230, 229);
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #3d3c3f2e;
+}
+
+.deleteButton {
+    margin: 3px 180px;
+    bottom: 0px;
+    width: 40px;
+    position: absolute;
+    background-color: #3d3c3f2e;
+    display: block;
+}
+
+
+.title {
+    text-align: center;
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.test {
+    display: block;
+    margin: 15px;
+    border-radius: 10px;
+    border: 2px solid rgb(54, 22, 22);
+}
+
+.textarea {
+    position: relative;
+    border: 2px solid rgb(54, 22, 22);
+    min-width: 200px;
+    min-height: 60px;
+    outline: none;
+    resize: none;
+
+}
+
+.listItems {
+    border: 2px solid rgb(54, 22, 22);
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: #3d3c3f2e;
+    min-height: 200px;
+    position: relative;
+    width: 32%;
+
+}
+
+.active {
+    background-color: rgb(179, 179, 180);
+}
+
+.list-title {
+    font-size: 22px;
+    text-align: center;
+}
+
+.list-text {
+    font-size: 14px;
+    text-align: center;
+}
+
+.date {
+    margin: 5px 10px;
+    display: block;
+    align-items: center;
+    bottom: 0px;
+    position: absolute;
+}
