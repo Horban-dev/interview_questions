@@ -8,14 +8,12 @@ import List from './List';
 import './test.css';
 
 const Test = () => {
-  const [notes, setNotes] = useState(JSON.parse(localStorage.notes));
+  const [notes, setNotes] = useState([]);
   const [activeClass, setActiveClass] = useState(false);
   const [text, setText] = useState('');
   const [title, setTitle] = useState('');
 
-  useEffect(() => {
-    localStorage.setItem('notes', JSON.stringify(notes));
-  }, [notes]);
+  
   const onHandleClick = () => {
     const newNotes = {
       id: uuidv4(),
@@ -46,13 +44,13 @@ const Test = () => {
         setTitle={setTitle}
         onHandleClick={onHandleClick}
     />
-    {/* <List
+    <List
         notes={notes}
         onHandleDelete={onHandleDelete}
         activeClass={activeClass}
         setActiveClass={setActiveClass}
         sortFunc={sortFunc}
-    /> */}
+    />
     </div>
 
   );
