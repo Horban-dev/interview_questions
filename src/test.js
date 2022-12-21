@@ -46,13 +46,13 @@ const Test = () => {
         setTitle={setTitle}
         onHandleClick={onHandleClick}
     />
-    <List
+    {/* <List
         notes={notes}
         onHandleDelete={onHandleDelete}
         activeClass={activeClass}
         setActiveClass={setActiveClass}
         sortFunc={sortFunc}
-    />
+    /> */}
     </div>
 
   );
