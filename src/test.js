@@ -6,14 +6,16 @@ import { v4 as uuidv4 } from 'uuid';
 import Inpuut from './Inpuut';
 import List from './List';
 import './test.css';
-
+const test = JSON.parse(localStorage.notes)
 const Test = () => {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(test);
   const [activeClass, setActiveClass] = useState(false);
   const [text, setText] = useState('');
   const [title, setTitle] = useState('');
-
   
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
   const onHandleClick = () => {
     const newNotes = {
       id: uuidv4(),
